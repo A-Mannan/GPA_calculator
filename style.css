@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #1d2b3a;
+  border-bottom: 20px solid #00dfc4;
+}
+
+.header{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #1d2b3a;
+  background: #00dfc4;
+  width: 100%;
+}
+
+.header h1{
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+
+.header p{
+  font-size: 1rem;
+  margin: 0 5rem 0 5rem;
+  font-weight: lighter;
+}
+
+.header svg{
+  display: block;
+}
+.input-marks {
+  position: relative;
+  width: 250px;
+  margin-top: 10px;
+}
+
+.input-marks input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 1em;
+}
+
+.input-marks span {
+ position: absolute;
+ left: 0;
+ padding: 10px;
+ pointer-events: none; 
+ font-size: 1em;
+ color: rgba(255, 255, 255, 0.25);
+ text-transform: uppercase;
+ transition: 0.5s;
+}
+
+.input-marks input:valid ~ span,
+.input-marks input:focus ~ span
+{
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  color:#00dfc4;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+  border-radius: 2px;
+}
+
+.input-marks input:valid,
+.input-marks input:focus
+{
+  border: 1px solid #00dfc4;
+}
+
+#total-courses input:valid ~ span,
+#total-courses input:focus ~ span
+{
+  color: #1d2b3a;
+  background: #00dfc4;
+  
+}
+
+#total-courses {
+  margin-bottom: 30px;
+}
+
+.wrapper h2{
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  color: #00dfc4;
+  margin-bottom: 25px;
+}
+
+.wrapper {
+  align-self: center;
+  align-items: center;
+  margin-top: 20px;
+  min-height: 64vh;
+}
+
+.cgpa-tag{
+  margin-top: 30px;
+  align-self: center;
+  border-radius: 75px 75px;
+  text-align: center;
+  width: 90px;
+  height: 27px  ;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:#1d2b3a;
+  background: #00dfc4;
+}
+
+#gpa-result {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 65px;
+  font-weight: 550;
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 40px 0;
+  color: #03e9f4;
+  font-size: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.btn:hover {
+  background: #03e9f4;
+  color: #1d2b3a;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+}
+
+.btn span{
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.btn span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 { 
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+.btn span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+.btn span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}

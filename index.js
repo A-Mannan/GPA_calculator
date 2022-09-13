@@ -21,7 +21,6 @@ function handleChange(event) {
       input.type = "number";
       input.id = `course-${courseIndex + 1}`;
       input.required = true;
-      // input.placeholder = `Enter marks of Course ${courseIndex + 1}`
       let span = document.createElement("span");
       span.innerHTML = `Course ${courseIndex + 1} marks`;
       childDiv.appendChild(input);
@@ -48,10 +47,6 @@ function handleSubmit() {
     console.log(marks);
     coursesGPA.push(calculateGPA(marks));
   });
-  // for (let i = 0; i < input_fields.length - 1; i++) {
-  //   let marks = Math.round(parseFloat(input_fields[i].value));
-  //   coursesGPA.push(calculateGPA(marks));
-  // }
   const CGPA = coursesGPA.reduce((a, b) => a + b, 0) / coursesGPA.length;
   const result = document.querySelector("#gpa-result");
   result.innerText = CGPA.toFixed(2);
@@ -60,11 +55,8 @@ function handleSubmit() {
   CGPAdiv.className = "cgpa-tag";
   const body = document.querySelector('body')
   body.insertBefore(CGPAdiv, body.children[1])
-  // document.querySelector('.wrapper').prepend(CGPAdiv);
-  // result.appendChild(document.createTextNode(CGPA.toFixed(2)));
 }
 
 document
   .querySelector("#input-total-courses")
   .addEventListener("input", handleChange);
-// document.querySelector("#CGPAform").addEventListener("submit", handleSubmit);
